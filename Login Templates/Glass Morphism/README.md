@@ -20,30 +20,10 @@
 ---
 
 ## 🖼️ Preview
-┌──────────────────────────────────────┐
-│  ░░ floating neon blobs (bg) ░░      │
-│                                      │
-│  ┌──────────────────────────────┐   │
-│  │   ◈  Brand Logo              │   │
-│  │                              │   │
-│  │   Welcome Back 👋            │   │
-│  │   Sign in to continue        │   │
-│  │                              │   │
-│  │  [ Google ]  [ GitHub ]      │   │
-│  │  ─── or continue ───         │   │
-│  │                              │   │
-│  │  Email                       │   │
-│  │  [ you@example.com ]         │   │
-│  │                              │   │
-│  │  Password       Forgot?      │   │
-│  │  [ ••••••••• 👁 ]           │   │
-│  │                              │   │
-│  │  [ 🚀 Sign In ]             │   │
-│  │                              │   │
-│  │  Create account →           │   │
-│  └──────────────────────────────┘   │
-└──────────────────────────────────────┘
----
+
+<p align="center">
+  <img src="https://api.microlink.io/?url=https://logintemplategithub.netlify.app/login-designs/glassmorphism-dark/&screenshot=true&meta=false&embed=screenshot.url" width="800"/>
+</p>
 
 ## 🌌 About Design
 
