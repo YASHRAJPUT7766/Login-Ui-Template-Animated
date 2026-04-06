@@ -1,0 +1,39 @@
+{
+  "name": "style-lovin-logins",
+  "version": "0.1.0",
+  "description": "A collection of 1000+ beautiful login UI designs in HTML/CSS/JS",
+  "main": "scripts/index.js",
+  "scripts": {
+    "dev": "live-server . --open=index.html",
+    "lint": "eslint login-designs/**/*.js",
+    "lint:css": "stylelint login-designs/**/*.css",
+    "format": "prettier --write login-designs/**/*.{html,css,js}",
+    "test": "node tests/run-all.js",
+    "validate": "node scripts/validate-designs.js",
+    "generate-index": "node scripts/generate-index.js",
+    "count": "node scripts/count-designs.js",
+    "preview": "node scripts/preview-server.js"
+  },
+  "keywords": [
+    "login", "ui", "css", "html", "design", "frontend", "creative", "collection", "glassmorphism", "neumorphism"
+  ],
+  "author": "style-lovin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/style-lovin/style-lovin-logins"
+  },
+  "homepage": "https://style-lovin.dev",
+  "bugs": {
+    "url": "https://github.com/style-lovin/style-lovin-logins/issues"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "stylelint": "^16.3.1",
+    "stylelint-config-standard": "^36.0.0",
+    "live-server": "^1.2.2",
+    "chalk": "^5.3.0",
+    "glob": "^10.3.12"
+  }
+}
