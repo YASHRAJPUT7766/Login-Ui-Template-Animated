@@ -11,6 +11,6 @@
 
 If you discover a security issue, please **do NOT** open a public issue.
 
-Email: security@style-lovin.dev
+Email: yash92726@gmail.com
 
 We'll respond within 48 hours and patch within 7 days.
