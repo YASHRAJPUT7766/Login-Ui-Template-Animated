@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Style Lovin Logins — 1000+ Beautiful Login UI Designs</title>
+  <meta name="description" content="A growing collection of beautiful, handcrafted login page designs. Pure HTML, CSS & JS. No frameworks. Just gorgeous UI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #08070f;
+      --surface:   rgba(255,255,255,0.04);
+      --border:    rgba(255,255,255,0.09);
+      --accent:    #7c6ff7;
+      --accent-2:  #c471ed;
+      --text:      #f0eeff;
+      --muted:     rgba(240,238,255,0.5);
+      --radius:    16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ─── Noise texture overlay ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── Background blobs ─── */
+    .bg-blobs {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.3;
+      animation: drift 18s ease-in-out infinite;
+    }
+
+    .blob-1 { width: 600px; height: 600px; background: #7c6ff7; top: -200px; left: -200px; animation-duration: 20s; }
+    .blob-2 { width: 450px; height: 450px; background: #c471ed; bottom: -150px; right: -100px; animation-duration: 16s; animation-delay: -6s; }
+
+    @keyframes drift {
+      0%, 100% { transform: translate(0,0); }
+      50%       { transform: translate(40px, -50px); }
+    }
+
+    /* ─── Everything above bg ─── */
+    .page-wrap { position: relative; z-index: 1; }
+
+    /* ─── Nav ─── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,7,15,0.7);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .nav-logo-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-gh {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text) !important;
+      font-size: 0.82rem !important;
+      font-weight: 500;
+      transition: background 0.15s, border-color 0.15s !important;
+    }
+
+    .nav-gh:hover { background: rgba(255,255,255,0.08) !important; border-color: rgba(255,255,255,0.2) !important; color: var(--text) !important; }
+
+    /* ─── Hero ─── */
+    .hero {
+      text-align: center;
+      padding: 100px 24px 72px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      background: rgba(124,111,247,0.12);
+      border: 1px solid rgba(124,111,247,0.3);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-family: 'Fira Code', monospace;
+      color: #a29bfe;
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      background: linear-gradient(135deg, #fff 30%, #a29bfe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(124,111,247,0.4);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(124,111,247,0.5); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .btn-ghost:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.18); }
+
+    /* ─── Stats bar ─── */
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      padding: 28px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+
+    .stat { text-align: center; }
+
+    .stat-num {
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 3px; }
+
+    /* ─── Section ─── */
+    .section { max-width: 1180px; margin: 0 auto; padding: 0 24px 80px; }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title span { color: var(--muted); font-weight: 400; font-size: 1rem; margin-left: 10px; }
+
+    /* ─── Design cards grid ─── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .design-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.2s, border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .design-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(124,111,247,0.2);
+      border-color: rgba(124,111,247,0.3);
+    }
+
+    /* Preview area — rendered iframe */
+    .card-preview {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: #0a0914;
+    }
+
+    .card-preview iframe {
+      width: 150%;
+      height: 150%;
+      border: none;
+      transform: scale(0.667);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+
+    .card-preview-overlay {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+    }
+
+    .preview-open-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 6px 12px;
+      background: rgba(124,111,247,0.9);
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.15s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .design-card:hover .preview-open-btn { opacity: 1; }
+
+    .card-body { padding: 16px 18px 18px; }
+
+    .card-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 9px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .tag-accent {
+      background: rgba(124,111,247,0.12);
+      border-color: rgba(124,111,247,0.25);
+      color: #a29bfe;
+    }
+
+    /* ─── Categories section ─── */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .cat-card {
+      padding: 18px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s, transform 0.15s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .cat-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    .cat-emoji { font-size: 1.6rem; margin-bottom: 8px; }
+    .cat-label { font-size: 0.82rem; font-weight: 600; }
+    .cat-count { font-size: 0.72rem; color: var(--muted); margin-top: 3px; }
+
+    /* ─── How to contribute ─── */
+    .contribute-box {
+      background: rgba(124,111,247,0.06);
+      border: 1px solid rgba(124,111,247,0.2);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      text-align: center;
+    }
+
+    .contribute-box h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+    .contribute-box p { color: var(--muted); margin-bottom: 24px; line-height: 1.7; }
+
+    .code-block {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.82rem;
+      color: #a29bfe;
+      text-align: left;
+      margin: 0 auto 24px;
+      max-width: 480px;
+      line-height: 1.8;
+    }
+
+    .code-block .cmt { color: var(--muted); }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    footer a:hover { color: var(--text); }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 70px 20px 50px; }
+      .stats-bar { gap: 24px; }
+      footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- Nav -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">✦</div>
+      Style Lovin Logins
+    </a>
+    <ul class="nav-links">
+      <li><a href="#designs">Designs</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#contribute">Contribute</a></li>
+      <li>
+        <a href="https://github.com/style-lovin/style-lovin-logins" target="_blank" rel="noopener" class="nav-gh">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">✦ Pure HTML · CSS · JavaScript · No Frameworks</div>
+    <h1>1000+ Beautiful<br/>Login UI Designs</h1>
+    <p>Every design is handcrafted, self-contained, and drop-dead gorgeous. Open a file and it works — no build steps, no npm install.</p>
+    <div class="hero-actions">
+      <a href="#designs" class="btn-primary">
+        Browse Designs →
+      </a>
+      <a href="https://github.com/style-lovin/style-lovin-logins" target="_blank" rel="noopener" class="btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        Star on GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-num">1000+</div><div class="stat-label">Login Designs</div></div>
+    <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Categories</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-label">Build Steps</div></div>
+    <div class="stat"><div class="stat-num">MIT</div><div class="stat-label">License</div></div>
+  </div>
+
+  <!-- Designs section -->
+  <section class="section" id="designs">
+    <div class="section-title">
+      Featured Designs <span>live preview — click to open</span>
+    </div>
+
+    <div class="cards-grid">
+
+      <!-- Card 1: Glassmorphism Dark -->
+      <div class="design-card" style="cursor:default">
+        <div class="card-preview">
+          <iframe
+            src="login-designs/glassmorphism-dark/index.html"
+            title="Glassmorphism Dark preview"
+            loading="lazy"
+            sandbox="allow-scripts"
+          ></iframe>
+          <div class="card-preview-overlay"></div>
+          <a href="login-designs/glassmorphism-dark/index.html" target="_blank" class="preview-open-btn">
+            Open ↗
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="card-name">glassmorphism-dark</div>
+          <div class="card-meta">
+            <span class="tag tag-accent">🌫️ Glassmorphism</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder cards (add more designs here) -->
+      <div class="design-card" style="cursor:default; opacity:0.4; pointer-events:none;">
+        <div class="card-preview" style="display:grid;place-items:center; color:rgba(255,255,255,0.2); font-size:2rem;">+</div>
+        <div class="card-body">
+          <div class="card-name">dark-neon-glow</div>
+          <div class="card-meta"><span class="tag">🌑 Dark &amp; Moody</span><span class="tag">Coming soon</span></div>
+        </div>
+      </div>
+
+      <div class="design-card" style="cursor:default; opacity:0.4; pointer-events:none;">
+        <div class="card-preview" style="display:grid;place-items:center; color:rgba(255,255,255,0.2); font-size:2rem;">+</div>
+        <div class="card-body">
+          <div class="card-name">minimal-white</div>
+          <div class="card-meta"><span class="tag">☀️ Minimal</span><span class="tag">Coming soon</span></div>
+        </div>
+      </div>
+
+      <div class="design-card" style="cursor:default; opacity:0.4; pointer-events:none;">
+        <div class="card-preview" style="display:grid;place-items:center; color:rgba(255,255,255,0.2); font-size:2rem;">+</div>
+        <div class="card-body">
+          <div class="card-name">retro-terminal</div>
+          <div class="card-meta"><span class="tag">🕹️ Retro</span><span class="tag">Coming soon</span></div>
+        </div>
+      </div>
+
+      <div class="design-card" style="cursor:default; opacity:0.4; pointer-events:none;">
+        <div class="card-preview" style="display:grid;place-items:center; color:rgba(255,255,255,0.2); font-size:2rem;">+</div>
+        <div class="card-body">
+          <div class="card-name">aurora-gradient</div>
+          <div class="card-meta"><span class="tag">🌊 Gradient</span><span class="tag">Coming soon</span></div>
+        </div>
+      </div>
+
+      <div class="design-card" style="cursor:default; opacity:0.4; pointer-events:none;">
+        <div class="card-preview" style="display:grid;place-items:center; color:rgba(255,255,255,0.2); font-size:2rem;">+</div>
+        <div class="card-body">
+          <div class="card-name">luxury-editorial</div>
+          <div class="card-meta"><span class="tag">💎 Luxury</span><span class="tag">Coming soon</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="section-title">Categories</div>
+    <div class="categories-grid">
+      <a href="#designs" class="cat-card"><div class="cat-emoji">🌫️</div><div class="cat-label">Glassmorphism</div><div class="cat-count">1 design</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">🌑</div><div class="cat-label">Dark & Moody</div><div class="cat-count">Coming soon</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">☀️</div><div class="cat-label">Minimal & Clean</div><div class="cat-count">Coming soon</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">🕹️</div><div class="cat-label">Retro / Terminal</div><div class="cat-count">Coming soon</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">🌊</div><div class="cat-label">Gradient Heavy</div><div class="cat-count">Coming soon</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">🏛️</div><div class="cat-label">Brutalist</div><div class="cat-count">Coming soon</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">💎</div><div class="cat-label">Luxury / Editorial</div><div class="cat-count">Coming soon</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">🎮</div><div class="cat-label">Playful / 3D</div><div class="cat-count">Coming soon</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">🧊</div><div class="cat-label">Neumorphism</div><div class="cat-count">Coming soon</div></a>
+      <a href="#designs" class="cat-card"><div class="cat-emoji">🌿</div><div class="cat-label">Organic / Nature</div><div class="cat-count">Coming soon</div></a>
+    </div>
+  </section>
+
+  <!-- Contribute -->
+  <section class="section" id="contribute">
+    <div class="contribute-box">
+      <h2>Add Your Design ✦</h2>
+      <p>Creating a design is dead simple. Fork the repo, scaffold your folder, go wild, submit a PR.</p>
+      <div class="code-block">
+        <span class="cmt"># 1. Clone</span><br/>
+        git clone https://github.com/style-lovin/style-lovin-logins.git<br/>
+        <br/>
+        <span class="cmt"># 2. Scaffold your design</span><br/>
+        node scripts/new-design.js your-sick-design<br/>
+        <br/>
+        <span class="cmt"># 3. Open and go wild</span><br/>
+        open login-designs/your-sick-design/index.html
+      </div>
+      <a href="https://github.com/style-lovin/style-lovin-logins" target="_blank" rel="noopener" class="btn-primary">
+        View on GitHub →
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span>Made with 🔥 obsession by the <a href="https://github.com/style-lovin" target="_blank">style-lovin</a> community</span>
+    <span>
+      <a href="https://github.com/style-lovin/style-lovin-logins/blob/main/LICENSE" target="_blank">MIT License</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/style-lovin/style-lovin-logins" target="_blank">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="https://logintemplatesgithub.netlify.app">logintemplatesgithub.netlify.app</a>
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>
