@@ -1,7 +1,7 @@
 # 🌫️ glassmorphism-dark
 
 > **Category:** Glassmorphism · **Vibe:** Dreamy & Futuristic  
-> **Live Preview:** [logintemplatesgithub.netlify.app/login-designs/glassmorphism-dark/](https://logintemplatesgithub.netlify.app/login-designs/glassmorphism-dark/)
+> **Live Preview:** [logintemplatesgithub.netlify.app/Login-Ui-Template-Animated/Login Templates/Glass Morphism/]()
 
 ---
 
