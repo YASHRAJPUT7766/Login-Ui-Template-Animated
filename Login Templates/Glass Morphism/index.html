@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glassmorphism Dark — Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background blobs -->
+  <div class="bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Login card -->
+  <main class="card" role="main">
+    <div class="card-header">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h1 class="card-title">Welcome back</h1>
+      <p class="card-subtitle">Sign in to your account</p>
+    </div>
+
+    <!-- Social login -->
+    <div class="social-row">
+      <button class="social-btn" aria-label="Continue with Google">
+        <img src="../../assets/icons/google.svg" alt="" />
+        <span>Google</span>
+      </button>
+      <button class="social-btn" aria-label="Continue with GitHub">
+        <img src="../../assets/icons/github.svg" alt="" />
+        <span>GitHub</span>
+      </button>
+    </div>
+
+    <div class="divider"><span>or continue with email</span></div>
+
+    <!-- Form -->
+    <form class="login-form" novalidate>
+
+      <div class="field" id="field-email">
+        <label for="email">Email address</label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <img src="../../assets/icons/mail.svg" alt="" />
+          </span>
+          <input
+            id="email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <div class="field" id="field-password">
+        <label for="password">
+          Password
+          <a href="#" class="forgot-link" tabindex="0">Forgot password?</a>
+        </label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <img src="../../assets/icons/lock.svg" alt="" />
+          </span>
+          <input
+            id="password"
+            type="password"
+            placeholder="••••••••"
+            autocomplete="current-password"
+            required
+            minlength="6"
+          />
+          <button type="button" class="toggle-pass" aria-label="Toggle password visibility">
+            <img src="../../assets/icons/eye.svg" alt="" class="icon-eye" />
+            <img src="../../assets/icons/eye-off.svg" alt="" class="icon-eye-off" hidden />
+          </button>
+        </div>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        <span class="btn-text">Sign in</span>
+        <span class="btn-loader" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </span>
+      </button>
+
+    </form>
+
+    <p class="signup-prompt">
+      Don't have an account?
+      <a href="#">Create one free →</a>
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
