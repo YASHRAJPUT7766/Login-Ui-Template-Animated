@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "id": "glassmorphism",
+      "label": "Glassmorphism",
+      "emoji": "🌫️",
+      "description": "Frosted glass effects, blur, transparency",
+      "prefixes": ["glass-", "frosted-", "blur-"]
+    },
+    {
+      "id": "dark",
+      "label": "Dark & Moody",
+      "emoji": "🌑",
+      "description": "Deep blacks, neon accents, high contrast",
+      "prefixes": ["dark-", "night-", "noir-", "shadow-"]
+    },
+    {
+      "id": "minimal",
+      "label": "Minimal & Clean",
+      "emoji": "☀️",
+      "description": "Lots of white space, subtle typography",
+      "prefixes": ["minimal-", "clean-", "simple-", "light-"]
+    },
+    {
+      "id": "retro",
+      "label": "Retro / Terminal",
+      "emoji": "🕹️",
+      "description": "CRT effects, monospace, pixelated, old-school",
+      "prefixes": ["retro-", "terminal-", "crt-", "pixel-", "vhs-"]
+    },
+    {
+      "id": "gradient",
+      "label": "Gradient Heavy",
+      "emoji": "🌊",
+      "description": "Mesh gradients, aurora, color-rich backgrounds",
+      "prefixes": ["gradient-", "aurora-", "mesh-", "rainbow-"]
+    },
+    {
+      "id": "brutalist",
+      "label": "Brutalist",
+      "emoji": "🏛️",
+      "description": "Raw, bold, intentional, rule-breaking",
+      "prefixes": ["brutal-", "raw-", "bold-"]
+    },
+    {
+      "id": "luxury",
+      "label": "Luxury / Editorial",
+      "emoji": "💎",
+      "description": "Serif fonts, gold accents, refined spacing",
+      "prefixes": ["luxury-", "editorial-", "premium-", "elegant-"]
+    },
+    {
+      "id": "playful",
+      "label": "Playful / 3D",
+      "emoji": "🎮",
+      "description": "Bright colors, depth, fun animations",
+      "prefixes": ["3d-", "playful-", "fun-", "cartoon-", "pop-"]
+    },
+    {
+      "id": "neumorphism",
+      "label": "Neumorphism",
+      "emoji": "🧊",
+      "description": "Soft UI, extruded surfaces, gentle shadows",
+      "prefixes": ["neo-", "soft-", "neumorphic-"]
+    },
+    {
+      "id": "nature",
+      "label": "Organic / Nature",
+      "emoji": "🌿",
+      "description": "Earth tones, soft curves, natural textures",
+      "prefixes": ["nature-", "organic-", "earth-", "forest-", "ocean-"]
+    }
+  ]
+}
