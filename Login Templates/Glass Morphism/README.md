@@ -20,11 +20,29 @@
 ---
 
 ## 🖼️ Preview
-
-<p align="center">
-  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="600"/>
-</p>
-
+┌──────────────────────────────────────┐
+│  ░░ floating neon blobs (bg) ░░      │
+│                                      │
+│  ┌──────────────────────────────┐   │
+│  │   ◈  Brand Logo              │   │
+│  │                              │   │
+│  │   Welcome Back 👋            │   │
+│  │   Sign in to continue        │   │
+│  │                              │   │
+│  │  [ Google ]  [ GitHub ]      │   │
+│  │  ─── or continue ───         │   │
+│  │                              │   │
+│  │  Email                       │   │
+│  │  [ you@example.com ]         │   │
+│  │                              │   │
+│  │  Password       Forgot?      │   │
+│  │  [ ••••••••• 👁 ]           │   │
+│  │                              │   │
+│  │  [ 🚀 Sign In ]             │   │
+│  │                              │   │
+│  │  Create account →           │   │
+│  └──────────────────────────────┘   │
+└──────────────────────────────────────┘
 ---
 
 ## 🌌 About Design
