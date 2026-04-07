@@ -29,7 +29,7 @@
 
 ## 🔗 Live Demo
 
-<a href="https://logintemplategithub.netlify.app/login-designs/crystal-auth/">
+<a href="https://logintemplategithub.netlify.app/login-designs/crystal auth/">
   <img src="https://img.shields.io/badge/%F0%9F%8C%90%20Open%20Live%20Preview-C9A84C?style=for-the-badge&logoColor=black" height="44"/>
 </a>
 &nbsp;&nbsp;
@@ -47,7 +47,7 @@
 
 > ⚡ Auto-screenshot — always fresh, loads directly on GitHub
 
-<a href="https://logintemplategithub.netlify.app/login-designs/crystal-auth/">
+<a href="https://logintemplategithub.netlify.app/login-designs/crystal auth/">
   <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystal-auth%2F&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=1280&viewport.height=800" alt="crystal-auth Live Preview" width="100%"/>
 </a>
 
@@ -56,13 +56,13 @@
 <table>
   <tr>
     <td align="center" width="50%">
-      <a href="https://logintemplategithub.netlify.app/login-designs/crystal-auth/">
+      <a href="https://logintemplategithub.netlify.app/login-designs/crystal auth/">
         <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystal-auth%2F&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=640&viewport.height=420" width="100%" alt="Sign In Preview"/>
       </a>
       <br/><br/><sub><b>🔑 Sign In — 3D Gem View</b></sub>
     </td>
     <td align="center" width="50%">
-      <a href="https://logintemplategithub.netlify.app/login-designs/crystal-auth/">
+      <a href="https://logintemplategithub.netlify.app/login-designs/crystal auth/">
         <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystal-auth%2F%23signup&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=640&viewport.height=420" width="100%" alt="Sign Up Preview"/>
       </a>
       <br/><br/><sub><b>✨ Sign Up — Gem Morph Mode</b></sub>
