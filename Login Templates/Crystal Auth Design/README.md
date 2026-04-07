@@ -57,13 +57,13 @@
   <tr>
     <td align="center" width="50%">
       <a href="https://logintemplategithub.netlify.app/login-designs/crystal auth/">
-        <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystalauth%2F&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=640&viewport.height=420" width="100%" alt="Sign In Preview"/>
+        <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystal%20auth%2F&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=640&viewport.height=420" width="100%" alt="Sign In Preview"/>
       </a>
       <br/><br/><sub><b>🔑 Sign In — 3D Gem View</b></sub>
     </td>
     <td align="center" width="50%">
       <a href="https://logintemplategithub.netlify.app/login-designs/crystal auth/">
-        <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystalauth%2F%23signup&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=640&viewport.height=420" width="100%" alt="Sign Up Preview"/>
+        <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystal%20auth%2F%23signup&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=640&viewport.height=420" width="100%" alt="Sign Up Preview"/>
       </a>
       <br/><br/><sub><b>✨ Sign Up — Gem Morph Mode</b></sub>
     </td>
