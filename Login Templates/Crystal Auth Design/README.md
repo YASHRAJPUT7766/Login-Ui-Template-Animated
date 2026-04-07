@@ -48,7 +48,7 @@
 > ⚡ Auto-screenshot — always fresh, loads directly on GitHub
 
 <a href="https://logintemplategithub.netlify.app/login-designs/crystal auth/">
-  <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystalauth%2F&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=1280&viewport.height=800" alt="crystal-auth Live Preview" width="100%"/>
+  <img src="https://api.microlink.io/?url=https%3A%2F%2Flogintemplategithub.netlify.app%2Flogin-designs%2Fcrystal%20auth%2F&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&viewport.width=1280&viewport.height=800" alt="crystal-auth Live Preview" width="100%"/>
 </a>
 
 <br/><br/>
