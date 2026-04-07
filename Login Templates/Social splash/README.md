@@ -1,91 +1,142 @@
 # 🌊 social-splash
 
-> **Category:** Social Login · **Vibe:** Clean & Human — zero AI-slop  
-> **Live Preview:** [logintemplategithub.netlify.app/login-designs/social-splash/](https://logintemplategithub.netlify.app/login-designs/social-splash/)
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&size=22&duration=3000&color=7C6FF7&center=true&vCenter=true&width=600&lines=Clean+Social+Login+UI;Human+Centered+Design+💧;Smooth+Micro+Interactions+⚡;Zero+AI+Slop+🔥" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/UI-Social Login-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Theme-Dark + Light-black?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Animations-Smooth-purple?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/No Dependencies-✔️-green?style=for-the-badge"/>
+</p>
 
 ---
 
-## Preview
+## 🔗 Live Preview
 
-```
-┌───────────────────────────────────┐  ← card (dark/light)
-│                            [🌙 ☀] │  ← theme toggle (top-right)
-│  • NUCLEUS                        │
-│                                   │
-│  Let's get                        │
-│  you in.           ← gradient em  │
-│  Choose how you'd like to cont.   │
-│                                   │
-│  [f  Sign in with Facebook      ] │  ← shimmer animation
-│                                   │
-│  ─────────── or ───────────       │
-│                                   │
-│  [ 👤 Guest        ] [ More › ]   │
-│                         ┌───────┐ │  ← flyout slides up on "More"
-│                         │ G Google    │
-│                         │ ⊞ Microsoft │
-│                         │  Apple     │
-│                         │ 𝕏 Twitter   │
-│                         └───────┘ │
-│                                   │
-│  ☐  I agree to Terms & Privacy   │  ← animated checkmark draw
-└───────────────────────────────────┘
-```
+👉 **[Open Live UI](https://logintemplategithub.netlify.app/login-designs/social-splash/)**
 
 ---
 
-## Features
+## 🖼️ Live UI Preview (Auto Screenshot)
 
-| Feature | Detail |
-|---|---|
-| 🌙 **Dark / Light toggle** | Smooth CSS var swap, persisted to localStorage |
-| 🔵 **Facebook CTA** | Primary button with shimmer slide animation |
-| 👤 **Guest button** | One-click guest access |
-| ➕ **More flyout** | Slides up with staggered Google, Microsoft, Apple, X |
-| ✅ **Terms checkbox** | SVG checkmark draw animation on tick |
-| 🔒 **Terms gate** | Sign-in buttons dimmed until checkbox is ticked |
-| 💧 **Ripple feedback** | Click ripple on card surface |
-| 🎞️ **Entrance stagger** | Each element fades + slides in sequentially |
-| 🌟 **Pulse wordmark dot** | Glowing animated brand indicator |
+<p align="center">
+  <img src="https://image.thum.io/get/width/1200/crop/800/noanimate/https://logintemplategithub.netlify.app/login-designs/social-splash/" />
+</p>
 
 ---
 
-## Files
+## 🌌 Design Philosophy
 
-```
+💧 Clean, human-first interface  
+⚡ Fast interactions, zero clutter  
+🌗 Dark + Light theme harmony  
+🧠 Built for real users — not just visuals  
+
+---
+
+## 🚀 Features
+
+- 🌙 Dark / Light theme toggle (saved in localStorage)  
+- 🔵 Facebook primary CTA with shimmer animation  
+- 👤 Instant Guest login  
+- ➕ "More" providers flyout (Google, Microsoft, Apple, X)  
+- ✅ Animated Terms checkbox (SVG draw effect)  
+- 🔒 Buttons locked until Terms accepted  
+- 💧 Ripple click feedback  
+- 🎞️ Staggered entry animations  
+- 🌟 Glowing brand dot animation  
+
+---
+
+## 🎥 Animation Highlights
+
+✔ Smooth fade + slide entry  
+✔ Button shimmer effect  
+✔ Flyout slide animation  
+✔ Checkbox draw animation  
+✔ Ripple click feedback  
+
+---
+
+## 📁 Project Structure
+
+```bash
 social-splash/
-├── index.html   ← Full markup
-├── style.css    ← All tokens, animations, dark+light theme
-├── script.js    ← Toggle, flyout, ripple, stagger, terms gate
-└── README.md    ← This file
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 ```
 
 ---
 
-## Customisation
+## 🎨 Customisation
 
 ```css
-/* Colors live in :root and [data-theme="light"] */
 :root {
-  --facebook:  #1877f2;  /* FB button color */
-  --check-fill: #7c6ff7; /* checkbox fill */
-  --accent2:   #bba9ff;  /* link + gradient */
+  --facebook:   #1877f2;
+  --check-fill: #7c6ff7;
+  --accent2:    #bba9ff;
 }
 ```
 
-To change brand name — edit `.wordmark span` text in `index.html`.  
-To add more providers — copy a `.btn-provider` block and increment `style="--i:N"`.
+👉 Change colors easily  
+👉 Add providers by duplicating `.btn-provider`  
 
 ---
 
-## Usage
+## ⚡ Quick Start
 
 ```bash
-open login-designs/social-splash/index.html
+open index.html
 ```
 
-No server. No build. No npm. Just open.
+No setup needed 🚀
 
 ---
 
-*Part of [Style Lovin Logins](https://logintemplategithub.netlify.app) — beautiful login UI designs.*
+## 🌍 Browser Support
+
+| Feature | Support |
+|--------|--------|
+| Animations | ✅ All modern browsers |
+| Theme toggle | ✅ Yes |
+| Responsive | ✅ Fully |
+
+---
+
+## 💎 Pro Tips (Make it Viral 🔥)
+
+🚀 Add multiple UI designs in one repo  
+🚀 Use title: **🔥 1000+ Login UI Collection**  
+🚀 Share on LinkedIn + Twitter  
+🚀 Add preview GIFs  
+🚀 Keep README clean + visual  
+
+---
+
+## 🌟 Support
+
+⭐ Star the repo  
+🍴 Fork it  
+📢 Share it  
+
+---
+
+## 🔥 More UI Designs
+
+🌐 https://logintemplategithub.netlify.app
+
+---
+
+## 🧑‍💻 Author
+
+**Tynixor**
+
+---
+
+<p align="center">
+  💖 Crafted with precision | ⚡ Built for impact | 🚀 Keep shipping
+</p
